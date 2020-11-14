@@ -1,5 +1,6 @@
+### LOCAL DEV IMAGE ### 
 FROM nginx:alpine
-LABEL author="Dan Wahlin"
+LABEL author="Henrik Aronsson"
 COPY ./config/nginx.conf /etc/nginx/conf.d/default.conf
 
 
@@ -19,3 +20,15 @@ COPY ./config/nginx.conf /etc/nginx/conf.d/default.conf
 # https://blog.codewithdan.com/2017/10/25/docker-volumes-and-print-working-directory-pwd/
 
 # docker run -p 8080:80 -v $(pwd)/dist:/usr/share/nginx/html nginx-angular
+
+
+# Henrik notes / changes
+#1 build ng without removing dist folder
+# ng build --watch  --delete-output-path false
+
+
+# 2. Now build the Docker image:
+# docker build -t nginx-angular -f nginx.dockerfile .
+
+# 3. Changed used absolute path
+# docker run -p 8080:80 -v C:/Dev/Angular-Core-Concepts/dist:/usr/share/nginx/html nginx-angular
