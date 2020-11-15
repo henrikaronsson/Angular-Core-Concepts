@@ -1,6 +1,6 @@
 ##### Stage 1
 FROM node:latest as node
-LABEL author="Dan Wahlin"
+LABEL author="Henrik Aronsson"
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install
