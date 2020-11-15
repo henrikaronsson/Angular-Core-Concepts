@@ -1,6 +1,6 @@
 FROM node:alpine
 
-LABEL author="Dan Wahlin"
+LABEL author="Henrik Aronsson"
 
 WORKDIR /var/www/angular-node-service
 
